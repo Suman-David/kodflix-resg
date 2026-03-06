@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: kodflix-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_HOST
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_PORT
+        value: 20984
+      - key: JWT_SECRET
+        generateValue: true
+      - key: TMDB_KEY
+        sync: false
+      - key: CLIENT_URL
+        sync: false
